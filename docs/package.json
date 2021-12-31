@@ -1,0 +1,14 @@
+{
+  "name": "docsify_cft",
+  "version": "1.0.0",
+  "description": "> An awesome project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gitalk": "^1.7.2"
+  }
+}

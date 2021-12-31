@@ -7,13 +7,14 @@
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
-  <link rel="stylesheet" href="//unpkg.com/gitalk/dist/gitalk.css">
+  <!-- <link rel="stylesheet" href="//unpkg.com/gitalk/dist/gitalk.css"> -->
+  <link rel="stylesheet" href="node_modules/gitalk/dist/gitalk.css">
 </head>
 <body>
   <div id="app"></div>
-  <div id="gitalk-container"></div>  
-  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    
+  
+  <script src="node_modules/gitalk/dist/gitalk.min.js"></script>
 
   <script>
     window.$docsify = {
@@ -22,7 +23,7 @@
       loadSodebar: true, 
     }
   </script>
-
+  <div id="gitalk-container"></div>
   <script type="text/javascript">
     const gitalk = new Gitalk({
         // 这个需要在github上申请一个OAuth application
@@ -32,6 +33,7 @@
         owner: 'ldXiao',
         admin: ['ldXiao'],    // 这个仓库的管理员
         distractionFreeMode: true,  // 是否添加全屏遮罩
+        enableEdit: false,
         id: window.location.pathname    // 页面的唯一标识，gitalk 会根据这个标识自动创建的issue的标签,我们使用页面的相对路径作为标识
     })
     gitalk.render('gitalk-container');
